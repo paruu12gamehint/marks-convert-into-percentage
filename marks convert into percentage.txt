@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class subject{
+    int max =  100;
+    int obtd;
+}
+
+public class Main {
+    public static void main(String[] args) {
+       subject s1 = new subject();
+        System.out.println("Enter maths marks");
+        Scanner scan = new Scanner(System.in);
+        s1.obtd = scan.nextInt();
+
+        subject s2= new subject();
+        System.out.println("Enter science marks");
+        s2.obtd = scan.nextInt();
+
+        subject s3 = new subject();
+        System.out.println("Enter english marks");
+        s3.obtd = scan.nextInt();
+
+        subject s4 = new subject();
+        System.out.println("Enter biology marks");
+        s4.obtd = scan.nextInt();
+
+        subject s5 = new subject();
+        System.out.println("Enter physic marks");
+        s5.obtd = scan.nextInt();
+        int tobtd = (s1.obtd)+(s2.obtd)+(s3.obtd)+(s4.obtd)+(s5.obtd);
+        int per = (tobtd*100/500);
+        System.out.println( "percantage obatiende : "+per);
+
+
+
+    }
+}
