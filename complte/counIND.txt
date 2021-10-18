@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>countdowun</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(bg1.png.png);
+            background-position: center;
+            background-size: cover;
+            padding: 0 8%;
+            position: relative;
+        }
+
+        .logo {
+            width: 120px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .contant {
+            top: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+
+        .contant h1 {
+            font-size: 64px;
+            font-weight: 600;
+        }
+
+        .contant h1 span {
+            color: #9ef006;
+        }
+
+        .contant h2 span {
+            color: rgb(15, 94, 214);
+        }
+
+        .contant h2 span p {
+            color: rgb(15, 94, 214);
+        }
+
+        .contant button {
+            background: transparent;
+            border: 2px solid #fff;
+            outline: none;
+            padding: 12px 25px;
+            color: #fff;
+        }
+
+        .lunch-time {
+            display: flex;
+        }
+
+        .lunch-time div {
+            flex-basis: 100px;
+        }
+
+        .lunch-time div p {
+            font-size: 60px;
+            margin-bottom: -14px;
+        }
+
+        .ball {
+            width: 250px;
+            position: absolute;
+            right: 10%;
+            bottom: 0;
+            animation: ball 3s linear infinite;
+
+        }
+
+        @keyframes ball {
+            0% {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            100% {
+                bottom: 105%;
+                opacity: 3;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="contant">
+            <p> The Day</p>
+            <h1>BIG <span> MATCH</span> SOON</h1>
+
+            <h2><span>India</span></h2>
+            <h3>VS</h3>
+            <h2 id=" p"><span>Pakistan</span></h2>
+
+
+            <div class="lunch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="second">00</p>
+                    <span>second</span>
+                </div>
+            </div>
+
+        </div>
+        <img src="ball11.png" class="ball">
+    </div>
+    <script>
+        var countDownDate = new Date("Oct 24 ,2021 00:00:00").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var second = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("second").innerHTML = second;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = 00;
+                document.getElementById("hours").innerHTML = 00;
+                document.getElementById("minutes").innerHTML = 00;
+                document.getElementById("second").innerHTML = 00;
+
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>
