@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Bar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: serif  ;
+        }
+        .header{
+            width: 100%;
+            height: 100vh;
+            background-image: url(19.11.2021/back.png);
+            background-position: center;
+            background-size: cover;
+        }
+        nav{
+            width: 100%;
+            padding: 20px 0 ;
+            text-align: center;
+        }
+        .logo{
+            width: 100px;
+            margin: -20px 100px ;
+            margin-top: 29px;
+            cursor: pointer;
+        }
+        nav ul{
+            background-color: #000;
+            width: 100%;
+            margin-top: 22px;
+        }
+        nav ul li{
+                display: inline-block;
+                list-style: none;
+                margin: 20px 30px;
+                color: #fff;
+        }
+        .text{
+            padding: 20px 8px;
+        }
+        nav.sticky{
+            position: fixed;
+            top: -60px;
+            left: 0;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between ;
+            transition: padding 1s;
+        }
+        nav.sticky ul{
+             width: auto;
+        }
+
+
+    </style>
+</head>  
+<body>
+    <div class="header">
+        <nav id="navbar">
+            <img src="19.11.2021/e-sport.png" class="logo">
+            <ul id="menu">
+                <li>Home</li>
+                <li>ABOUT</li>
+                <li>SERVICES</li>
+                <li>PRODUCT</li>
+                <li>CONTACT</li>
+            </ul>
+        </nav>
+    </div>
+    <p class="text">Eternals is easily one of Marvel Studios’ biggest films in scope and ambition, telling a story that spans 7000 years, cruising through human history and beyond the known space. While that makes it the MCU’s most intriguing film to date on a philosophical level, it is let down by a story and script that favours worldbuilding over character development.
+
+        As of late, it’s almost abundantly clear that a film starting with a wall of text that isn’t called ‘Star Wars’ may have too much work cut out for itself to live up to the mountains of lore established before the first live-action frame gets projected. However, that gets me excited as I’m reminded of entering a heightened reality, and for a film that aims to establish the grand rules of a universe that even higher beings like Thor, Loki, and maybe even the Time Variance Authority (in Loki) may not know of is a big task. So, what’s the deal here? Who are the Eternals, and where have they been? As the trailers have managed to answer that concisely, the Eternals are immortal beings who were sent to Earth by a higher life (?) form called the Celestials. Their mission? To rid the planet of the evil Deviants, apex predators at the top of the galactic food chain. The 10 leading Eternals arrive on Earth roughly seven thousand years before the ‘present day’ and while they are successful in managing to defeat the Deviants, they are stranded on the planet, waiting to be called back by Arishem, the prime Celestial who sent them on their mission.
+        
+        Is that a lot to take in? Well, that was just the starters. The film hasn’t even begun yet and we’re already tapping into themes of the creation and evolution of life itself in the MCU.
+        Being a film that introduces higher concepts along with about a dozen characters is a lot to fit into its runtime of over two and a half hours, making it the second-longest MCU film only behind Avengers: Endgame. However, while Endgame managed to vaguely introduce the concept of the multiverse and deliver a finale filled with emotional gravitas, Eternals fails to establish a connection between the eponymous heroes strong enough for me to care about its world-ending plot. The plot kicks off with the return of the Deviants in present-day, long thought to be wiped out, pushing the now-disbanded Eternals to come together and figure out a mystery.</p>
+
+
+        <p> With Gemma Chan’s Sersi and Richard Madden’s Ikaris at the lead, we see both the glory days and the downfall of the immortal heroes through the lens of human history as the residents of the MCU know it. While almost every one of the Eternals gets enough screen time to stand on their own, it’s Sersi and Ikaris’ love story that is at the heart of the film. Each Eternal has something special to offer aside from their unique powers, with everyone except Angelina Jolie’s Thena and Salma Hayek’s Ajak, who feel grossly underutilised in the film. While the former has a side plot that connects back into the film’s core conflict, Hayek’s Ajak is only there to propel the story forward and nothing more. Lia McHugh’s Sprite and Barry Keoghan’s Druig are definite highlights, as well as Brian Tyree Henry’s Phastos, the MCU’s first openly gay character. Joining in the well representative cast is Kumail Nanjiani’s Kingo, a famed Bollywood star in the MCU (which is just as fun to see as it sounds) and Lauren Ridloff’s Makkari, the MCU’s first deaf superhero. There’s a pattern here with the talented cast coming together to be the most representative group of characters the MCU has ever seen fighting together with, or against, each other. It’s a shame then that the script relegates most of them to only spit out long exposition dumps to further flesh out the universe and lore of the Eternals, Celestials and the cosmos.
+        
+        Each Eternal has their own view of humanity, with some being empathetic and others seeing them for the faulty being they are. Keoghan’s Druig is a great example who questions their mission statement, stating that staying away from human affairs may not be the best idea amidst the myriad of wars they have seen. Alternatively, Phastos comes around to caring for the species after being devastated by the effects of his meddling in the advancement of technology. There are flashbacks that constantly remind us of the scale of the film and just how important the Eternals have been to the know human history, but the sum of those parts aren't any greater in the end.</p>
+
+
+        <script>
+            var navbar = document.getElementById("navbar");
+            var menu = document.getElementById("menu");
+
+            window.onscroll = function(){
+                if (window.pageYOffset >= menu.offsetTop){
+                    navbar.classList.add("sticky");
+                }
+                else{
+                    navbar.classList.remove("sticky");
+
+                }
+            }
+        </script>
+</body>
+</html>
